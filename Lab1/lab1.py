@@ -1,0 +1,36 @@
+#george = [69,9001,101]
+#total = 0
+#for i in range(len(george)):
+#	print (george[i])
+#	print (george[i]*2)
+#	total = total + george[i]
+#	if i == 2:
+#		print (total)
+import turtle
+turtle.begin_fill()
+turtle.penup()
+turtle.goto(100,150)
+turtle.pendown()
+turtle.color("red")
+turtle.circle(50)
+turtle.penup()
+turtle.goto(50,100)
+turtle.pendown()
+turtle.color("green")
+turtle.circle(50)
+turtle.penup()
+turtle.goto(0,150)
+turtle.pendown()
+turtle.color("black")
+turtle.circle(50)
+turtle.penup()
+turtle.goto(-50,100)
+turtle.pendown()
+turtle.color("yellow")
+turtle.circle(50)
+turtle.penup()
+turtle.goto(-100,150)
+turtle.pendown()
+turtle.color("blue")
+turtle.circle(50)
+turtle.mainloop()
