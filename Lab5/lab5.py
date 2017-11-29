@@ -10,23 +10,51 @@ class Square(Turtle):
 #squary = Square(5)
 
 class Hexagon(Turtle):
-	def __init__(self, size):
-		turtle.begin_poly()
-		turtle.fd(10)
-		turtle.left(60)
-		turtle.fd(10)
-		turtle.left(60)
-		turtle.fd(10)
-		turtle.left(60)
-		turtle.fd(10)
-		turtle.left(60)
-		turtle.fd(10)
-		turtle.end_poly()
-		p = turtle.get_poly()
-		register_shape("hexagon", p)
+	def __init__(self, size, colour, speed):
 		Turtle.__init__(self)
-		self.shapesize(size)
+#		self.home()
+		self.hideturtle()
+		self.penup()
+		self.begin_poly()
+		self.fd(size)
+		self.left(60)
+		self.fd(size)
+		self.left(60)
+		self.fd(size)
+		self.left(60)
+		self.fd(size)
+		self.left(60)
+		self.fd(size)
+		self.left(60)
+		self.fd(size)
+		self.end_poly()
+		p = self.get_poly()
+		self.showturtle()
+		register_shape("hexagon", p)
 		self.shape("hexagon")
-hexy = Hexagon(10)
+		self.color(colour)
+		self.speed(speed)
+	def Goaway(self, dis):
+		self.fd(dis)
+
+#hexy = Hexagon(30, "red", 8)
+#hexy.Goaway(100)
+
+class Polygon(Turtle):
+	def __init__(self, lines):
+		Turtle.__init__(self)
+		self.hideturtle()
+		self.penup()
+		self.begin_poly()
+		for i in range(lines):
+			self.fd(20)
+			self.left(360/lines)
+		self.end_poly()
+		p = self.get_poly()
+		self.showturtle()
+		register_shape("newshape", p)
+		self.shape("newshape")
+polygony = Polygon(30)
+
 
 turtle.mainloop()
