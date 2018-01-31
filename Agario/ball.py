@@ -7,8 +7,6 @@ class Ball(Turtle):
 	def __init__(self,x,y,dx,dy,r,color):
 		Turtle.__init__(self)
 		self.penup()
-		self.x = x
-		self.y = y
 		self.goto(x, y)
 		self.dx = dx
 		self.dy = dy
@@ -17,9 +15,9 @@ class Ball(Turtle):
 		self.shape("circle")
 		self.color(color)
 	def move(self, screen_width, screen_hieght):
-		current_x = self.x
+		current_x = self.xcor()
 		new_x = current_x + self.dx
-		current_y = self.y
+		current_y = self.ycor()
 		new_y = current_y + self.dy
 		right_side_ball = new_x + self.r
 		left_side_ball = new_x - self.r
