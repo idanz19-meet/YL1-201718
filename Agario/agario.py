@@ -4,19 +4,6 @@ import random
 import time
 import math
 from ball import Ball
-import pygame
-
-pygame.init()
-pygame.mixer.init()
-sound = pygame.mixer.Sound("meansofproduction.mp3")
-
-sound.play()
-#import pyglet
-
-#music = pyglet.resource.media('meansofproduction.mp3')
-#music.play()
-
-#pyglet.app.run()
 
 turtle.tracer(0)
 turtle.hideturtle()
